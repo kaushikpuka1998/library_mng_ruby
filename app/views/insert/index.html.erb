@@ -1,0 +1,48 @@
+<h1>Insert#index</h1>
+<p>Find me in app/views/insert/index.html.erb</p>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+
+
+<%= form_tag('/bookcreated', :method=>'post') do %>
+ 
+
+  <div class="form-group col-sm-12">
+    <label>Author:</label>
+    <%= text_field_tag "Author",params[:Author],placeholder:"Author",class:"form-control"%>
+  </div>
+
+  <div class="form-group col-sm-12">
+   <label for="code">Description:</label>
+    <%= text_field_tag "Description",params[:Description],placeholder:"Description",class:"form-control"%>
+  </div>
+
+   <div class="form-group col-sm-12">
+   <label for="code">ISBN:</label>
+    <%= text_field_tag "ISBN",params[:ISBN],placeholder:"ISBN",class:"form-control"%>
+  </div>
+
+   <div class="form-group col-sm-12">
+   <label for="code">Title:</label>
+    <%= text_field_tag "Title",params[:Title],placeholder:"Title",class:"form-control"%>
+  </div>
+
+  <div class="form-group col-sm-12">
+   <label for="code">Image</label>
+    <%= text_field_tag "Image",params[:image],placeholder:"Paste The Url",class:"form-control"%>
+  </div>
+
+  <br>
+
+  <div class="form-group col-sm-12">
+      <button class="btn btn-success" value="submit">Submit</button>
+      <%= link_to 'Go to All Books Page',bookdetails_index_path,class:"btn btn-warning" %>
+  </div>
+
+
+
+
+<% end %>
